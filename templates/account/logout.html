@@ -1,0 +1,28 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% block title %}
+Logout
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'account/logout.css' %}">
+{% endblock css %}
+
+{% block optional %}
+{% endblock optional %}
+
+{% block content %}
+<div class="logout jumbotron">
+    <h1>Logout</h1>
+    <P>are you sure you want to logout ?</P>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% include 'includes/form.html' with form=form %}
+        <button type="submit" class="btn btn-danger btn-lg">Logout</button>
+        <a href="{% url 'home' %}" class="btn btn-secondary btn-lg">Go BACK</a>
+    </form>
+
+</div>
+{% endblock content %}

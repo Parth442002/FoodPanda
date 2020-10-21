@@ -1,0 +1,56 @@
+{% load static %}
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="{% url 'store:home' %}">
+        <img src="{% static 'img/storelogo.jpg' %}" alt="" height="60" width="60" class="rounded-circle">
+        FoodPanda</a>
+    
+        <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+        aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon1"><span></span><span></span><span></span></div>
+    </button>
+    
+      <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent20">
+        <ul class="navbar-nav mr-auto">
+            <a class="nav-item nav-link active" href="{% url 'store:menu' %}">MENU</a>
+            <a class="nav-item nav-link active" href="{% url 'store:about' %}">ABOUT</a>
+            <a class="nav-item nav-link active" href="#">CONTACT</a>
+            {% if request.user.is_staff %}
+            <a class="nav-item nav-link active" href="#">ADMIN</a>
+            {% endif %}
+        </div>
+        <div class="navbar-nav ml-auto">
+            {% if request.user.is_authenticated %}
+            <a class="nav-item nav-link active" href="#">
+                <i class="fas fa-shopping-basket fa-2x"></i>
+                <span class='badge badge-warning' id='lblCartCount'> 5 </span>
+            </a>
+            <a class="nav-item nav-link active" href="#">
+              <i class="fa fa-user fa-2x" style="margin-left: 10px;"></i>
+              <span style="vertical-align: middle;font-size:larger;">{{ user.username }}</span>
+            </a>
+            {% else %}
+            <a class="nav-item nav-link active " href="{% url 'account_login' %}" id="login">Login</a>
+            <a class="nav-item nav-link active" href="{% url 'account_signup' %}">Register</a></li>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+<script>
+    $(document).ready(function () {
+
+        $('.first-button').on('hover', function () {
+      
+          $('.animated-icon1').toggleClass('open');
+        });
+        $('.second-button').on('hover', function () {
+      
+          $('.animated-icon2').toggleClass('open');
+        });
+        $('.third-button').on('hover', function () {
+      
+          $('.animated-icon3').toggleClass('open');
+        });
+      });
+</script>

@@ -1,0 +1,11 @@
+.reviews {
+	font-style: italic;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bolder;
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: 15px;
+}
+.main {
+	margin-top: 30px;
+}

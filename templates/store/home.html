@@ -1,0 +1,218 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}Home{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'store/home.css' %}">
+{% endblock css %}
+
+{% block optional %}
+{% endblock optional %}
+
+
+{% block content %}
+<div class="jumbotron card card-image" style="background-image: url('/static/img/hero.jpg')">
+  <div class="text-white text-center py-5 px-4">
+    <div>
+      <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Enjoy the best food in town !</strong></h2>
+      <p class="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+        optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
+      </p>
+      <a class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i>Order Online</a>
+    </div>
+  </div>
+</div>
+<!--Section: Examples-->
+<section id="examples" class="container text-center">
+  <!-- Heading -->
+  <h2 class="mb-5 font-weight-bold">Cuisines</h2>
+  
+  <div class="row">
+    <div class="col-sm">
+      <div class="card card-cascade narrower">
+
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+          <img class="card-img-top" src="{% static 'img/indianfood.jpg' %}" height="400" width="300" 
+            alt="Card image cap">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+      
+        <!-- Card content -->
+        <div class="card-body card-body-cascade">
+      
+          <!-- Label -->
+          <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i>Culinary</h5>
+          <!-- Title -->
+          <h4 class="font-weight-bold card-title">Indian</h4>
+          <!-- Text -->
+          <p class="card-text">Indian cuisine consists of a variety of regional and traditional cuisines native to the Indian subcontinent. Given the diversity in soil, climate, culture, ethnic groups, and occupations, these cuisines vary substantially and use locally available spices, herbs, vegetables, and fruits.</p>
+          <!-- Button -->
+          <a class="btn btn-unique" href='/'>Order Online</a>
+      
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm">
+      <div class="card card-cascade narrower">
+
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+          <img class="card-img-top" src="{% static 'img/italianfood.jpeg' %}" height="400" width="300"
+            alt="Card image cap">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+      
+        <!-- Card content -->
+        <div class="card-body card-body-cascade">
+      
+          <!-- Label -->
+          <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i>Culinary</h5>
+          <!-- Title -->
+          <h4 class="font-weight-bold card-title">Italian cuisine</h4>
+          <!-- Text -->
+          <p class="card-text">Italian cuisine is generally characterized by its simplicity, with many dishes having only two to four main ingredients. Italian cooks rely chiefly on the quality of the ingredients rather than on elaborate preparation. Ingredients and dishes vary by region.</p>
+          <!-- Button -->
+          <a class="btn btn-unique">Order Online</a>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="card card-cascade narrower">
+
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+          <img class="card-img-top" src="{% static 'img/thaifood.jpeg' %}" height="400" width="300"
+            alt="Card image cap">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+      
+        <!-- Card content -->
+        <div class="card-body card-body-cascade">
+      
+          <!-- Label -->
+          <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i> Culinary</h5>
+          <!-- Title -->
+          <h4 class="font-weight-bold card-title">Thai Cuisine</h4>
+          <!-- Text -->
+          <p class="card-text">Traditional Thai cuisine loosely falls into four categories: tom (boiled dishes), yam (spicy salads), tam (pounded foods), and gaeng (curries). Deep-fries, stir-fries, and steamed dishes derive from Chinese cooking.It is widely popular all over the world.</p>
+          <!-- Button -->
+          <a class="btn btn-unique">Order Online</a>
+      
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card card-cascade narrower">
+
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+          <img class="card-img-top" src="{% static 'img/carribeanfood.jpeg' %}" height="400" width="300"
+            alt="Card image cap">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+      
+        <!-- Card content -->
+        <div class="card-body card-body-cascade">
+      
+          <!-- Label -->
+          <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i> Culinary</h5>
+          <!-- Title -->
+          <h4 class="font-weight-bold card-title">Caribbean Cuisine</h4>
+          <!-- Text -->
+          <p class="card-text">The Caribbean cuisine is a fusion of African, Amerindian, European, East Indian, Arab and Chinese cuisine. When Columbus arrived in 1493, the Spaniards introduced other foods, notably coconut, chick-peas, cilantro, eggplant, onions, and garlic.</p>
+          <!-- Button -->
+          <a class="btn btn-unique">Order Online</a>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Main layout-->
+<main class="mt-5">
+  <div class="container">
+
+      <!--Section: Best Features-->
+      <section id="best-features" class="text-center">
+
+          <!-- Heading -->
+          <h2 class="mb-5 font-weight-bold">Best Features</h2>
+
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center mb-4">
+
+              <!--Grid column-->
+              <div class="col-md-8">
+
+                  <!-- Description -->
+                  <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptate
+                      hic
+                      provident nulla repellat
+                      facere esse molestiae ipsa labore porro minima quam quaerat rem, natus repudiandae debitis
+                      est
+                      sit pariatur.</p>
+
+              </div>
+              <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+          <!--Grid row-->
+          <div class="row">
+
+              <!--Grid column-->
+              <div class="col-md-4 mb-5">
+                  <i class="fa fa-camera-retro fa-4x orange-text"></i>
+                  <h4 class="my-4 font-weight-bold">Experience</h4>
+                  <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+                      maiores nam,
+                      aperiam minima
+                      assumenda deleniti hic.</p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-4 mb-1">
+                  <i class="fa fa-heart fa-4x orange-text"></i>
+                  <h4 class="my-4 font-weight-bold">Happiness</h4>
+                  <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+                      maiores nam,
+                      aperiam minima
+                      assumenda deleniti hic.</p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-4 mb-1">
+                  <i class="fas fa-pizza-slice fa-4x orange-text"></i>
+                  <h4 class="my-4 font-weight-bold">Taste</h4>
+                  <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+                      maiores nam,
+                      aperiam minima
+                      assumenda deleniti hic.</p>
+              </div>
+              <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+  <!--Grid row-->
+<!-- Card Narrower -->
+{% endblock content %}

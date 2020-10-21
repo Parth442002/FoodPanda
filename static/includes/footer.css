@@ -1,0 +1,8 @@
+footer .page-footer {
+	max-height: 20px;
+	bottom: 0%;
+}
+footer .page-footer .container ul {
+	margin-top: 20px;
+	margin-bottom: 5px;
+}

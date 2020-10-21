@@ -1,0 +1,177 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+Sign Up
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'account/signup.css' %}">
+{% endblock css %}
+
+{% block optional %}
+{% endblock optional %}
+
+{% block content %}
+<div class="container">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-md-7">
+      <div class="form d-flex justify-content-between">
+        <div class="image view">
+          <img src="https://mdbootstrap.com/img/Photos/Others/sidenav2.jpg">
+          <div class="mask flex-top rgba-black-strong">
+            <h1 class="heading">SIGN UP</h1>
+          </div>
+          <div class="mask flex-center ">
+            <p class="white-text extra">FoodPanda works best when you have an account.</p>
+          </div>
+          <div class="mask flex-bottom ">
+            <p class="white-text hell">Create one here.</p>
+          </div>
+        </div>
+        <form action="" method="post" class="my-form">
+          {% csrf_token %}
+          {% for hidden_field in form.hidden_fields %}
+            {{ hidden_field }}
+          {% endfor %}
+
+          {% if form.non_field_errors %}
+            <div class="alert alert-danger" role="alert">
+              {% for error in form.non_field_errors %}
+                {{ error }}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <!--Username-->
+          <div class="md-form ">
+            <i class="fa fa-user fa-2x prefix icon"></i>
+            {% if form.is_bound %}
+              {% if form.username.errors %}
+                {% render_field form.username class="form-control is-invalid" placeholder='' %}
+                {% for error in form.username.errors %}
+                  <div class="invalid-feedback">
+                    {{ error }}
+                  </div>
+                {% endfor %}
+              {% else %}
+                {% render_field form.username class="form-control is-valid" placeholder='' %}
+                <div class="valid-feedback">
+                  This username is available !
+                </div>
+              {% endif %}
+            {% else %}
+              {% render_field form.username class="form-control" placeholder='' %}
+            {% endif %}
+            <label for="id_username"> Username </label>
+            {% if form.username.help_text %}
+              <small class="form-text text-muted">{{ forn.username.help_text }}</small>
+            {% endif %}
+          </div>
+
+
+          <!--email address  input-with-pre-icon-->
+          <div class="md-form ">
+            <i class="fa fa-envelope fa-2x prefix icon"></i>
+            {% if form.is_bound %}
+              {% if form.email.errors %}
+                {% render_field form.email class="form-control is-invalid" placeholder='' %}
+                {% for error in form.email.errors %}
+                  <div class="invalid-feedback">
+                    {{ error }}
+                  </div>
+                {% endfor %}
+              {% else %}
+                {% render_field form.email class="form-control is-valid" placeholder='' %}
+                <div class="valid-feedback">
+                  Yay looks good 
+                </div>
+              {% endif %}
+            {% else %}
+              {% render_field form.email class="form-control" placeholder='' %}
+            {% endif %}
+            <label for="id_email">Email Address</label>
+            {% if form.email.help_text %}
+              <small class="form-text text-muted">{{ forn.email.help_text }}</small>
+            {% endif %}
+          </div>
+
+          <!--password-->
+          <div class="md-form  ">
+            <i class="fa fa-lock fa-2x prefix icon"></i>
+            {% if form.is_bound %}
+              {% if form.password1.errors %}
+                {% render_field form.password1 class="form-control is-invalid" id='pwd' placeholder='' %}
+                {% for error in form.password1.errors %}
+                  <div class="invalid-feedback">
+                    {{ error }}
+                  </div>
+                {% endfor %}
+              {% else %}
+                {% render_field form.password1 class="form-control is-valid" id='pwd' placeholder='' %}
+                <div class="valid-feedback">
+                  Strong af 
+                </div>
+              {% endif %}
+            {% else %}
+              {% render_field form.password1 class="form-control" id='pwd' placeholder='' %}
+            {% endif %}
+            <label for="id_password1">Password</label>
+            <span toggle="#pwd" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+          </div>
+          {% if form.password1.help_text %}
+          <small class="form-text text-muted">{{ forn.password1.help_text }}</small>
+          {% endif %}
+
+          <!-- Sign up button -->
+          <button type="submit" class="btn btn-info btn-lg">Sign Up</button>
+          
+          <!-- Social register -->
+          <p class="social_sign">or sign up with:</p>
+          <div class="social">
+          <a type="button" class="btn-floating btn-fb btn-sm">
+              <i class="fab fa-facebook-f"></i>
+          </a>
+          <a type="button" class="btn-floating btn-tw btn-sm">
+              <i class="fab fa-twitter"></i>
+          </a>
+          <a type="button" class="btn-floating btn-li btn-sm">
+              <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a type="button" class="btn-floating btn-git btn-sm">
+              <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+          <hr>
+
+          <!-- Terms of service -->
+          <p>By clicking
+              <em>Sign up</em> you agree to our
+              <a href="" target="_blank">terms of service</a>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block js %}
+<script>
+  $('.toggle-password').on('click', function() {
+    $(this).toggleClass('fa-eye fa-eye-slash');
+    let input = $($(this).attr('toggle'));
+    if (input.attr('type') == 'password') {
+      input.attr('type', 'text');
+    }
+    else {
+      input.attr('type', 'password');
+    }
+  });
+  
+  </script>
+{% endblock js %}

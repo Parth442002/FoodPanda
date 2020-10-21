@@ -1,0 +1,15 @@
+.logout {
+	background: #e8e4e3;
+	margin: 0 auto;
+	margin-top: 18vh;
+	max-width: 50vh;
+	max-height: 50vh;
+	align-self: center;
+	text-align: center;
+	border: black solid;
+	box-shadow: grey;
+}
+.logout h1 {
+	margin-top: 0;
+	margin-bottom: 2vh;
+}

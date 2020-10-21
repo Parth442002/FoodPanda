@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+body {
+	background: #f3f2f2;
+}
+.container {
+	margin-bottom: 5vh;
+}
+.row {
+	height: 100vh;
+	border-radius: 5vh;
+}
+.form {
+	box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.12);
+}
+.image img {
+	width: 350px;
+	min-width: 50px;
+	max-height: 630px;
+	min-height: 400px;
+}
+.my-form {
+	background-color: white;
+	margin-left: 0;
+	padding-left: 5vh;
+	padding-right: 5vh;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	max-height: 630px;
+	min-height: 400px;
+}
+.form-control {
+	color: blue;
+}
+.btn-info {
+	background-color: blue;
+	color: white;
+	text-align: center;
+	margin-left: 65px;
+}
+.social_sign {
+	text-align: center;
+	align-content: center;
+	margin-top: 1vh;
+}
+.social {
+	align-content: center;
+	margin-left: 10vh;
+	margin-bottom: 4px;
+	padding-bottom: 8px;
+}
+
+.extra {
+	text-align: center;
+	font-size: 17px;
+}
+.hell {
+	text-align: center;
+	font-size: 17px;
+	margin-top: 45vh;
+}
+
+#pwd {
+	top: 3.75rem !important;
+}
+span.field-icon {
+	position: absolute;
+	display: inline-block;
+	cursor: pointer;
+	right: 0.5rem;
+	top: 0.7rem;
+	color: blue;
+	z-index: 2;
+}
+
+.heading {
+	text-align: center;
+	color: white;
+	margin-top: 5vh;
+	color: hsla(0, 0%, 0%, .9);
+	font: normal 40px Varela Round, sans-serif;
+	height: 60px;
+	left: 0;
+	letter-spacing: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	animation: move linear 2000ms infinite;
+}
+
+@keyframes move {
+	0% {
+		text-shadow: 4px -4px 0 hsla(0, 100%, 50%, 1), 3px -3px 0 hsla(0, 100%, 50%, 1),
+			2px -2px 0 hsla(0, 100%, 50%, 1), 1px -1px 0 hsla(0, 100%, 50%, 1), -4px 4px 0 hsla(180, 100%, 50%, 1),
+			-3px 3px 0 hsla(180, 100%, 50%, 1), -2px 2px 0 hsla(180, 100%, 50%, 1), -1px 1px 0 hsla(180, 100%, 50%, 1);
+	}
+	25% {
+		text-shadow: -4px -4px 0 hsla(180, 100%, 50%, 1), -3px -3px 0 hsla(180, 100%, 50%, 1),
+			-2px -2px 0 hsla(180, 100%, 50%, 1), -1px -1px 0 hsla(180, 100%, 50%, 1), 4px 4px 0 hsla(0, 100%, 50%, 1),
+			3px 3px 0 hsla(0, 100%, 50%, 1), 2px 2px 0 hsla(0, 100%, 50%, 1), 1px 1px 0 hsla(0, 100%, 50%, 1);
+	}
+	50% {
+		text-shadow: -4px 4px 0 hsla(0, 100%, 50%, 1), -3px 3px 0 hsla(0, 100%, 50%, 1),
+			-2px 2px 0 hsla(0, 100%, 50%, 1), -1px 1px 0 hsla(0, 100%, 50%, 1), 4px -4px 0 hsla(180, 100%, 50%, 1),
+			3px -3px 0 hsla(180, 100%, 50%, 1), 2px -2px 0 hsla(180, 100%, 50%, 1), 1px -1px 0 hsla(180, 100%, 50%, 1);
+	}
+	75% {
+		text-shadow: 4px 4px 0 hsla(180, 100%, 50%, 1), 3px 3px 0 hsla(180, 100%, 50%, 1),
+			2px 2px 0 hsla(180, 100%, 50%, 1), 1px 1px 0 hsla(180, 100%, 50%, 1), -4px -4px 0 hsla(0, 100%, 50%, 1),
+			-3px -3px 0 hsla(0, 100%, 50%, 1), -2px -2px 0 hsla(0, 100%, 50%, 1), -1px -1px 0 hsla(0, 100%, 50%, 1);
+	}
+	100% {
+		text-shadow: 4px -4px 0 hsla(0, 100%, 50%, 1), 3px -3px 0 hsla(0, 100%, 50%, 1),
+			2px -2px 0 hsla(0, 100%, 50%, 1), 1px -1px 0 hsla(0, 100%, 50%, 1), -4px 4px 0 hsla(180, 100%, 50%, 1),
+			-3px 3px 0 hsla(180, 100%, 50%, 1), -2px 2px 0 hsla(180, 100%, 50%, 1), -1px 1px 0 hsla(180, 100%, 50%, 1);
+	}
+}

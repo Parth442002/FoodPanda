@@ -1,0 +1,97 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}Home{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock css %}
+
+{% block optional %}
+{% endblock optional %}
+
+{% block content %}
+<main role="main" class="main">
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <h1 class="reviews">Our Staff</h1>
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="https://akm-img-a-in.tosshub.com/indiatoday/vikas-story_647_120117044347.jpg?G.vNCkw4a4dDYVVioGpNhXrevKuI3tDM" width="140" height="140">
+          <h2>Executive Chef</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="https://magazine.xpert.tv/wp-content/uploads/2020/06/Awy4hBMasterchef-Sanjeev-Kapoor.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Cuisine Chef</h2>
+          <p>Chef Sanjeev Kapoor is the most celebrated face of Indian cuisine. He is Chef extraordinaire, runs a successful TV Channel FoodFood, hosted Khana Khazana cookery show on television for more than 17 years, author of 150+ best selling cookbooks, restaurateur and winner of several culinary awards.</p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="https://www.adgully.com/img/800/65148_ranveer-brar-1.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Chef de Cusine</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+        <h1 class="reviews">Reviews</h1>
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">The place to eat<span class="text-muted">-Chicago Best new restaurants</span></h2>
+          <p class="lead">Succulent pink-poached veal tenderloin was laid over a glossy pool of demi-glace so meaty and rich it evoked the image of a voluptuous Boll-inspired warrior goddess easing into a mud bath.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src='https://mfkrestaurant.com/wp-content/uploads/chcago-magazine-best-restaurants-2015.jpeg' height="500" width="500" alt="placeholder">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">-Saveur</span></h2>
+          <p class="lead">A pouf of celery root mousse arrived in a dark bowl atop shreds of smoked trout and trout roe, the whole sprinkled with cinder dust. Adding crackle to the pop of the eggs, the velveteen of the fish flesh and the foaminess of the mousse were little bits of crisped trout skin. I lapped it up in four bites.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" src="https://www.thespruceeats.com/thmb/k3FXeM4kS-m76y5Jj_LNXX-9Tgc=/753x753/smart/filters:no_upscale()/saveur-59352d935f9b589eb49f5412.jpg"" alt="Generic placeholder image" height="500" width="500">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">One of the best Italian food <span class="text-muted">-Food and Wine</span></h2>
+          <p class="lead">Despite the odd name, FoodPanda is not some strange cultish behaviour; rather it’s the perfectly legal way in which corn is soaked and cooked in an alkaline solution to remove the outer hull.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src="https://images-na.ssl-images-amazon.com/images/I/91me4DqzxhL._AC_SY445_.jpg" alt="Generic placeholder image" height="500" width="500">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </main>
+
+{% endblock content %}
